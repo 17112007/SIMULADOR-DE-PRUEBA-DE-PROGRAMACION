@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #001f3f;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #00264d;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p#saludo {
+  margin-top: 5px;
+  font-size: 1.2em;
+  color: #ff66b2;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #003366;
+}
+
+nav button {
+  background-color: #003366;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background-color: #ff66b2;
+  color: #001f3f;
+}
+
+nav button:focus {
+  outline: none;
+}
+
+
+main {
+  padding: 20px;
+}
+
+main section {
+  display: none;
+}
+
+main section.activo {
+  display: block;
+}
+
+.pregunta {
+  background-color: #003366;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.pregunta p {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.pregunta label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+form button {
+  background-color: #ff66b2;
+  border: none;
+  color: #001f3f;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #ff99cc;
+}
+
+.correcta {
+  color: #00ff00;
+}
+
+.incorrecta {
+  color: #ff3300;
+}
+
+.vacia {
+  color: #ffff66;
+}
+
+#fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#prompt {
+  background-color: #001f3f;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#prompt input {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+#prompt button {
+  margin-top: 15px;
+  background-color: #ff66b2;
+  border: none;
+  padding: 10px 20px;
+  color: #001f3f;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prompt button:hover {
+  background-color: #ff99cc;
+}
+
+body.bloqueado main,
+body.bloqueado header,
+body.bloqueado nav {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
